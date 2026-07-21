@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HUJAN Prediction ⚽</title>
+
+<meta name="description" content="Football Prediction Premium Dashboard">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     BACKGROUND EFFECT
+================================ -->
+
+<div class="background-glow"></div>
+
+
+
+<!-- ==============================
+     HEADER
+================================ -->
+
+<header class="header">
+
+
+<div class="brand">
+
+
+<div class="logo">
+⚽
+</div>
+
+
+<div>
+
+<h1>
+HUJAN PREDICTION
+</h1>
+
+<p>
+AI Football Analysis
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<div class="date-box">
+
+<span>
+TODAY
+</span>
+
+<strong id="todayDate">
+22 JULY 2026
+</strong>
+
+
+</div>
+
+
+
+</header>
+
+
+
+
+
+<!-- ==============================
+     NAV MENU
+================================ -->
+
+
+<nav class="menu">
+
+
+<button class="active">
+🏠 Home
+</button>
+
+
+<button>
+🏆 League
+</button>
+
+
+<button>
+🔥 Hot Prediction
+</button>
+
+
+<button>
+📅 Schedule
+</button>
+
+
+<button>
+📊 Statistics
+</button>
+
+
+</nav>
+
+
+
+
+
+
+
+<!-- ==============================
+     HERO SECTION
+================================ -->
+
+
+<section class="hero">
+
+
+<div>
+
+
+<h2>
+Football Prediction
+</h2>
+
+
+<p>
+Prediksi pertandingan sepakbola dengan analisa statistik terbaik.
+</p>
+
+
+</div>
+
+
+
+<div class="search-box">
+
+
+<input 
+type="text"
+id="search"
+placeholder="Search pertandingan..."
+>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ==============================
+     FILTER AREA
+================================ -->
+
+
+<section class="filter">
+
+
+<select id="leagueFilter">
+
+<option value="all">
+Semua Liga
+</option>
+
+
+</select>
+
+
+
+<select id="confidenceFilter">
+
+<option value="all">
+Semua Rating
+</option>
+
+
+<option value="high">
+High Confidence
+</option>
+
+
+<option value="medium">
+Medium Confidence
+</option>
+
+
+</select>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ==============================
+     MATCH CONTAINER
+================================ -->
+
+
+<main id="matchContainer">
+
+
+
+<!--
+DATA PERTANDINGAN
+AKAN MASUK DARI prediksi.json
+
+script.js akan mengisi otomatis
+
+-->
+
+
+
+<div class="loading">
+
+
+<div class="loader"></div>
+
+
+<p>
+Loading Prediction...
+</p>
+
+
+</div>
+
+
+
+</main>
+
+
+
+
+
+
+
+<!-- ==============================
+     FOOTER
+================================ -->
+
+<footer>
+
+
+<p>
+© 2026 HUJAN PREDICTION
+</p>
+
+
+<p>
+Premium Football Dashboard
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+<!-- ==============================
+     JAVASCRIPT
+================================ -->
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>

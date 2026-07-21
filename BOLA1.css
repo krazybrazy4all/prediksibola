@@ -1,0 +1,807 @@
+/* ======================================
+   HUJAN PREDICTION PREMIUM UI
+   STYLE CSS PART 2
+====================================== */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',Arial,sans-serif;
+}
+
+
+body{
+
+    background:#080c14;
+    color:#ffffff;
+    min-height:100vh;
+    overflow-x:hidden;
+
+}
+
+
+/* ======================================
+   BACKGROUND EFFECT
+====================================== */
+
+
+.background-glow{
+
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:
+    radial-gradient(
+        circle,
+        rgba(0,229,255,.18),
+        transparent 70%
+    );
+
+    top:-150px;
+    left:-150px;
+
+    z-index:-1;
+
+}
+
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:400px;
+    height:400px;
+
+    right:-150px;
+    bottom:-150px;
+
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(0,255,120,.12),
+        transparent 70%
+    );
+
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/* ======================================
+   HEADER
+====================================== */
+
+
+.header{
+
+    width:100%;
+    padding:20px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(15,23,42,.95),
+        rgba(9,14,25,.95)
+    );
+
+
+    border-bottom:
+
+    1px solid
+    rgba(255,255,255,.08);
+
+
+}
+
+
+
+.brand{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+
+
+.logo{
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:30px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #00e5ff,
+        #007bff
+    );
+
+
+    border-radius:16px;
+
+    box-shadow:
+
+    0 0 25px
+    rgba(0,229,255,.35);
+
+}
+
+
+
+.brand h1{
+
+    font-size:22px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+}
+
+
+
+.brand p{
+
+    color:#94a3b8;
+
+    font-size:13px;
+
+}
+
+
+
+
+.date-box{
+
+    background:
+
+    rgba(255,255,255,.05);
+
+
+    padding:12px 20px;
+
+    border-radius:14px;
+
+    text-align:right;
+
+    border:
+
+    1px solid
+    rgba(255,255,255,.08);
+
+}
+
+
+
+.date-box span{
+
+    display:block;
+
+    font-size:11px;
+
+    color:#94a3b8;
+
+}
+
+
+
+.date-box strong{
+
+    font-size:14px;
+
+}
+
+
+
+
+
+/* ======================================
+   MENU
+====================================== */
+
+
+.menu{
+
+    display:flex;
+
+    gap:12px;
+
+    padding:20px 40px;
+
+    overflow-x:auto;
+
+}
+
+
+
+.menu button{
+
+    border:none;
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.menu button:hover,
+.menu .active{
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #00e5ff,
+        #007bff
+    );
+
+
+    transform:translateY(-2px);
+
+
+}
+
+
+
+
+
+
+
+/* ======================================
+   HERO
+====================================== */
+
+
+.hero{
+
+    margin:20px 40px;
+
+    padding:30px;
+
+
+    border-radius:25px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.03)
+    );
+
+
+    border:
+
+    1px solid
+    rgba(255,255,255,.08);
+
+
+}
+
+
+
+.hero h2{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.hero p{
+
+    color:#94a3b8;
+
+}
+
+
+
+
+
+.search-box{
+
+    margin-top:25px;
+
+}
+
+
+
+.search-box input{
+
+
+    width:100%;
+
+    max-width:450px;
+
+
+    padding:15px 20px;
+
+
+    border-radius:14px;
+
+
+    border:none;
+
+
+    outline:none;
+
+
+    background:#111827;
+
+
+    color:white;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ======================================
+   FILTER
+====================================== */
+
+
+.filter{
+
+
+    display:flex;
+
+    gap:15px;
+
+    padding:0 40px;
+
+}
+
+
+
+.filter select{
+
+
+    background:#111827;
+
+    color:white;
+
+
+    border:
+
+    1px solid
+    rgba(255,255,255,.1);
+
+
+    padding:12px 18px;
+
+
+    border-radius:12px;
+
+
+}
+
+
+
+
+
+
+
+/* ======================================
+   MATCH AREA
+====================================== */
+
+
+#matchContainer{
+
+
+    padding:30px 40px;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(
+        auto-fit,
+        minmax(300px,1fr)
+    );
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+
+/* ======================================
+   MATCH CARD
+====================================== */
+
+
+.match-card{
+
+
+    background:
+
+
+    linear-gradient(
+        145deg,
+        #111827,
+        #0b1220
+    );
+
+
+    border-radius:22px;
+
+
+    padding:25px;
+
+
+    border:
+
+    1px solid
+    rgba(255,255,255,.08);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.match-card:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+
+    0 20px 40px
+
+    rgba(0,0,0,.4);
+
+
+}
+
+
+
+
+
+
+.league{
+
+
+    color:#38bdf8;
+
+
+    font-size:13px;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.team-box{
+
+
+    text-align:center;
+
+
+}
+
+
+
+.team{
+
+
+    font-size:18px;
+
+    font-weight:700;
+
+
+}
+
+
+
+.vs{
+
+
+    margin:15px;
+
+    color:#94a3b8;
+
+
+}
+
+
+
+
+.score{
+
+
+    font-size:35px;
+
+    font-weight:900;
+
+
+    color:#22c55e;
+
+
+}
+
+
+
+
+
+.rating{
+
+
+    margin-top:20px;
+
+
+}
+
+
+
+.rating-bar{
+
+
+    height:10px;
+
+
+    background:#1f2937;
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.rating-fill{
+
+
+    height:100%;
+
+
+    background:
+
+
+    linear-gradient(
+        90deg,
+        #22c55e,
+        #00e5ff
+    );
+
+
+}
+
+
+
+
+
+
+
+/* ======================================
+   LOADING
+====================================== */
+
+
+.loading{
+
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+    padding:50px;
+
+    color:#94a3b8;
+
+
+}
+
+
+
+.loader{
+
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+
+    border:
+
+    4px solid
+    rgba(255,255,255,.1);
+
+
+    border-top-color:#00e5ff;
+
+
+    margin:auto;
+
+    animation:
+
+    spin 1s linear infinite;
+
+
+}
+
+
+
+@keyframes spin{
+
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+
+}
+
+
+
+
+
+/* ======================================
+   FOOTER
+====================================== */
+
+
+footer{
+
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#64748b;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+
+
+/* ======================================
+   MOBILE
+====================================== */
+
+
+@media(max-width:600px){
+
+
+.header{
+
+    padding:20px;
+
+}
+
+
+
+.brand h1{
+
+    font-size:17px;
+
+}
+
+
+
+.date-box{
+
+    display:none;
+
+}
+
+
+
+.hero{
+
+    margin:15px;
+
+}
+
+
+
+.hero h2{
+
+    font-size:25px;
+
+}
+
+
+
+.filter{
+
+    padding:0 15px;
+
+}
+
+
+
+#matchContainer{
+
+    padding:20px 15px;
+
+}
+
+
+}

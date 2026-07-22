@@ -71,9 +71,32 @@ TEST POWER AJA NIH BRO, JANGAN TEGANG X
 TODAY
 </span>
 
-<strong id="todayDate">
-22 JULY 2026
-</strong>
+<div class="date-box">
+    <span>TODAY</span>
+    <strong id="todayDate"></strong>
+</div>
+
+<script>
+(function () {
+    const months = [
+        "JANUARY","FEBRUARY","MARCH","APRIL",
+        "MAY","JUNE","JULY","AUGUST",
+        "SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"
+    ];
+
+    function updateDate() {
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, "0");
+        const month = months[now.getMonth()];
+        const year = now.getFullYear();
+
+        document.getElementById("todayDate").textContent =
+            `${day} ${month} ${year}`;
+    }
+
+    updateDate();
+})();
+</script>
 
 
 </div>
